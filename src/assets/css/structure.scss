@@ -1,0 +1,216 @@
+/*** variables */////
+
+
+$primary: #193f5f;
+$secondary: #f8c557;
+$tertiary: #252c33;
+
+$text-color: #777777;
+$grey: #888;
+$grey-light: #bdbdbd;
+$grey-aside: #ececec;
+$white: #f5f5f5;
+$dark-blue: #0b2864;
+$grey-banner: #fcfcfd;
+$heading: #48455a;
+
+/** Fonts **/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+$font-primary: "Lato", sans-serif;
+
+// Border radius
+$border-radius: 8px;
+
+// Box shadow
+$box-shadow-card:
+    0 16px 38px -12px rgba(0, 0, 0, 0.56),
+    0 4px 25px 0px rgba(0, 0, 0, 0.12),
+    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+
+    /*********MIXINS *********/
+
+@mixin flexbox($justify-content: flex-start, $align-items: flex-start, $gap: 0, $flex-wrap: wrap, $flex-direction: row){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}
+    
+ 
+/************* STRUCTURE ***************/
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+html,
+#app {
+  scroll-behavior: smooth;
+}
+
+#app {
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 400;
+  color: $text-color;
+  line-height: 28px;
+  transition: 0.5s;
+    
+}
+
+// header {
+//   grid-area: header;
+//   background-color: black;
+// }
+
+// nav {
+//   grid-area: nav;
+// }
+
+// main {
+//   grid-area: content;
+//   background-color: white;
+// }
+
+// aside {
+//   grid-area: sidebar;
+// }
+
+// footer {
+//   grid-area: footer;
+//   background-color: #02014e;
+// }
+
+a {
+text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading;
+  margin-bottom: 0;
+}
+
+h1 {
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 45px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 43px;
+  letter-spacing: -0.8px;
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+p:last-of-type {
+margin-bottom:  1em;
+}
+
+.btn-primary {
+  color: $white !important;
+  background-color: $secondary;
+  border: 1px solid $secondary;
+
+  &:hover {
+    background-color: darken($secondary, 10%);
+    border: 1px solid darken($secondary, 10%);
+  }
+}
+
+.alert {
+  margin-bottom: 0;
+}
+
+pre {
+  width: 100%;
+  border-radius: $border-radius;
+}
+
+.parent-password {
+  position: relative;
+}
+
+.icon-password {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  color: $primary;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul, ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/******** GRID **********/ 
+
+
+
+header {
+  grid-area: header;
+  background-color: black;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: content;
+  background-color: white;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #02014e;
+}

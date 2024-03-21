@@ -1,0 +1,21 @@
+@import 'structure.scss';
+
+
+
+aside {
+    @include flexbox(space-around, center, 1em 0);
+    background: rgb(185, 184, 184);
+    font-size: 2em;
+    padding: 2rem;
+
+}
+
+@media screen and (min-width: 768px) {
+    aside {
+      @include flexbox(space-around, center,1em 0, wrap, column);
+      min-height: 80vh;
+      width: 20%;
+      
+    }
+    }
+
