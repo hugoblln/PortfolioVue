@@ -1,4 +1,4 @@
-/*** variables */////
+/************** variables ****************************/
 
 
 $primary: #193f5f;
@@ -24,23 +24,22 @@ $font-primary: "Lato", sans-serif;
 $border-radius: 8px;
 
 // Box shadow
-$box-shadow-card:
-    0 16px 38px -12px rgba(0, 0, 0, 0.56),
-    0 4px 25px 0px rgba(0, 0, 0, 0.12),
-    0 8px 10px -5px rgba(0, 0, 0, 0.2);
+$box-shadow-card: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+  0 4px 25px 0px rgba(0, 0, 0, 0.12),
+  0 8px 10px -5px rgba(0, 0, 0, 0.2);
 
-    /*********MIXINS *********/
+/*********MIXINS *********/
 
-@mixin flexbox($justify-content: flex-start, $align-items: flex-start, $gap: 0, $flex-wrap: wrap, $flex-direction: row){
-    display: flex;
-    justify-content: $justify-content;
-    align-items: $align-items;
-    gap: $gap;
-    flex-wrap: $flex-wrap;
-    flex-direction: $flex-direction;
+@mixin flexbox($justify-content: flex-start, $align-items: flex-start, $gap: 0, $flex-wrap: wrap, $flex-direction: row) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  gap: $gap;
+  flex-wrap: $flex-wrap;
+  flex-direction: $flex-direction;
 }
-    
- 
+
+
 /************* STRUCTURE ***************/
 
 * {
@@ -61,34 +60,12 @@ html,
   color: $text-color;
   line-height: 28px;
   transition: 0.5s;
-    
+
 }
 
-// header {
-//   grid-area: header;
-//   background-color: black;
-// }
-
-// nav {
-//   grid-area: nav;
-// }
-
-// main {
-//   grid-area: content;
-//   background-color: white;
-// }
-
-// aside {
-//   grid-area: sidebar;
-// }
-
-// footer {
-//   grid-area: footer;
-//   background-color: #02014e;
-// }
 
 a {
-text-decoration: none;
+  text-decoration: none;
 }
 
 h1,
@@ -141,7 +118,7 @@ p {
 }
 
 p:last-of-type {
-margin-bottom:  1em;
+  margin-bottom: 1em;
 }
 
 .btn-primary {
@@ -182,35 +159,46 @@ img {
   object-fit: cover;
 }
 
-ul, ol {
+ul,
+ol {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
-/******** GRID **********/ 
+/******** GRID **********/
+
+
+@media screen and (min-width: 768px) {
+  #app {
+    display: grid;
+    grid-template-areas:
+      'header header header'
+      'nav content content'
+      'footer footer footer';
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 80px 1fr 70px;
+  }
+
+  header {
+    grid-area: header;
+    background-color: black;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: content;
+    background-color: white;
+  }
 
 
 
-header {
-  grid-area: header;
-  background-color: black;
-}
+  footer {
+    grid-area: footer;
+    background-color: #02014e;
+  }
 
-nav {
-  grid-area: nav;
-}
-
-main {
-  grid-area: content;
-  background-color: white;
-}
-
-aside {
-  grid-area: sidebar;
-}
-
-footer {
-  grid-area: footer;
-  background-color: #02014e;
 }

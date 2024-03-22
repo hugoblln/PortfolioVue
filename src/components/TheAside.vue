@@ -1,15 +1,15 @@
 <script setup>
-import { RouterLink} from 'vue-router'
+import { RouterLink } from 'vue-router'
 
 </script>
 
 <template>
-<aside>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">À propos</RouterLink>
-    <RouterLink to="/about">À propos</RouterLink>
-    <RouterLink to="/about">À propos</RouterLink>
-</aside>
+    <aside>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/skills">Skills</RouterLink>
+        <RouterLink to="/experience">Experience</RouterLink>
+        <RouterLink to="/contact">Contact</RouterLink>
+    </aside>
 </template>
 
 <style scoped lang="scss">

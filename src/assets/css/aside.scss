@@ -14,7 +14,7 @@ aside {
     aside {
       @include flexbox(space-around, center,1em 0, wrap, column);
       min-height: 80vh;
-      width: 20%;
+      
       
     }
     }
